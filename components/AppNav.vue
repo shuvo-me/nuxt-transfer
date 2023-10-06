@@ -45,6 +45,16 @@
         >
           <InboxIcon class="h-7 w-7 stroke-current" />
         </button>
+        <button
+          @click="
+            $colorMode.value === 'dark'
+              ? ($colorMode.preference = 'light')
+              : ($colorMode.preference = 'dark')
+          "
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white"
+        >
+          <MoonIcon class="h-6 w-6 stroke-current" />
+        </button>
       </div>
       <button
         class="flex h-11 items-center justify-center rounded-full bg-gray-900 px-2 text-gray-400 hover:text-white"
@@ -67,4 +77,5 @@ import MailIcon from "~/assets/icons/mail.svg";
 import BellIcon from "~/assets/icons/bell.svg";
 import InboxIcon from "~/assets/icons/inbox.svg";
 import ChevronDownIcon from "~/assets/icons/chevron-down.svg";
+import MoonIcon from "~/assets/icons/moon.svg";
 </script>

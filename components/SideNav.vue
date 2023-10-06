@@ -1,10 +1,9 @@
 
-import { set } from 'nuxt/dist/app/compat/capi';
 <template>
   <aside class="flex w-64 flex-col px-4 pt-10 pb-6">
     <a
       href="#"
-      class="flex items-center gap-x-4 px-8 text-2xl font-medium text-white focus:outline-none"
+      class="flex items-center gap-x-4 px-8 text-2xl font-medium text-gray-900 dark:text-white focus:outline-none"
     >
       <DashboardIcon class="h-6 w-6 stroke-current" />
       <span>Transfer</span>
@@ -13,7 +12,7 @@ import { set } from 'nuxt/dist/app/compat/capi';
       <li v-for="item in menu" :key="item">
         <a
           href="#"
-          class="flex items-center gap-x-4 text-gray-400 hover:font-medium hover:text-white focus:font-medium focus:text-white focus:outline-none"
+          class="flex items-center gap-x-4 text-gray-900 hover:text-gray-700 dark:text-gray-400 hover:font-medium dark:hover:text-white focus:font-medium focus:text-white focus:outline-none"
         >
           <component :is="item.icon" class="h-6 w-6 stroke-current" />
           <span>{{ item.name }}</span>

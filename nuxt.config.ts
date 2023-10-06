@@ -2,8 +2,11 @@
 import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss','@nuxtjs/color-mode'],
   vite:{
     plugins: [svgLoader()]
-  }
+  },
+  colorMode: {
+    classSuffix: ''
+  },
 })
