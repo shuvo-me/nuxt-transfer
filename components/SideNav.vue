@@ -20,9 +20,9 @@
       </li>
     </ul>
     <div
-      class="sticky bottom-4 rounded-10 bg-gray-900 bg-[url(/img/line-pattern.svg)] bg-top p-6"
+      class="sticky bottom-4 rounded-10 bg-gray-50 dark:bg-gray-900 bg-[url(/img/line-pattern.svg)] bg-top p-6 drop-shadow-[1px_1px_30px_#cbd5e1] dark:drop-shadow-none"
     >
-      <div class="text-white">
+      <div class="text-gray-900 dark:text-white">
         Refer a friend and get <span class="font-bold">$5</span>
       </div>
       <div class="mt-3 text-sm text-gray-400">The reward of transfer.</div>
