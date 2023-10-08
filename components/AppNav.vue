@@ -26,14 +26,10 @@
     </div>
     <div class="flex w-2/5 items-center justify-between">
       <div class="flex items-center gap-x-2.5">
-        <button
-          class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white"
-        >
+        <button class="btn">
           <MailIcon class="h-7 w-7 stroke-current" />
         </button>
-        <button
-          class="relative flex h-11 w-11 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white"
-        >
+        <button class="btn relative">
           <BellIcon class="h-7 w-7 stroke-current" />
           <div class="absolute top-3 right-3 flex h-2 w-2">
             <span
@@ -42,9 +38,7 @@
             <span class="inline-flex h-2 w-2 rounded-full bg-indigo-400" />
           </div>
         </button>
-        <button
-          class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white"
-        >
+        <button class="btn">
           <InboxIcon class="h-7 w-7 stroke-current" />
         </button>
         <button
@@ -53,9 +47,13 @@
               ? ($colorMode.preference = 'light')
               : ($colorMode.preference = 'dark')
           "
-          class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-900 text-gray-400 hover:text-white"
+          class="btn"
         >
-          <MoonIcon class="h-6 w-6 stroke-current" />
+          <MoonIcon
+            class="h-6 w-6 stroke-current"
+            v-if="$colorMode.value === 'light'"
+          />
+          <SunIcon class="h-6 w-6 stroke-current" v-else />
         </button>
       </div>
       <button
@@ -80,4 +78,5 @@ import BellIcon from "~/assets/icons/bell.svg";
 import InboxIcon from "~/assets/icons/inbox.svg";
 import ChevronDownIcon from "~/assets/icons/chevron-down.svg";
 import MoonIcon from "~/assets/icons/moon.svg";
+import SunIcon from "~/assets/icons/sun.svg";
 </script>

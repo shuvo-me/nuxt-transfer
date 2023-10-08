@@ -9,3 +9,9 @@
         transition: all 0.5s ease-in-out;
     }
 }
+
+@layer components{
+    .btn{
+        @apply flex h-11 w-11 items-center justify-center rounded-full bg-gray-50 dark:bg-gray-900 text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white
+    }
+}
