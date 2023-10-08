@@ -1,7 +1,9 @@
 <template>
   <nav class="flex items-center gap-x-6">
     <div class="flex w-3/5 items-center justify-between">
-      <h1 class="text-[30px] font-bold text-white">Overview</h1>
+      <h1 class="text-[30px] font-bold text-gray-700 dark:text-white">
+        Overview
+      </h1>
       <div class="flex items-center gap-x-2">
         <div class="relative">
           <span
@@ -12,11 +14,11 @@
           <input
             type="text"
             placeholder="Search"
-            class="rounded-10 bg-gray-900 py-3 pr-4 pl-10 text-sm text-gray-400 focus:text-white focus:outline-none"
+            class="rounded-10 bg-gray-50 dark:bg-gray-900 focus:drop-shadow-sm py-3 pr-4 pl-10 text-sm text-gray-400 focus:text-gray-700 dark:focus:text-white focus:outline-none"
           />
         </div>
         <button
-          class="rounded-10 bg-gray-900 py-3 px-4 text-sm text-gray-400 hover:text-white"
+          class="rounded-10 bg-gray-50 dark:bg-gray-900 py-3 px-4 text-sm text-gray-600 dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:drop-shadow-sm"
         >
           Add Account
         </button>
