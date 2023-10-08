@@ -91,13 +91,15 @@ const invoices = [
           <div class="pt-1 text-gray-700 dark:text-white">Active</div>
         </div>
       </div>
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">
+          <h2 class="text-[20px] font-medium text-gray-700 dark:text-white">
             Statistics of costs
           </h2>
           <button
-            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-700 py-2 px-4 text-sm text-gray-400 hover:text-white"
+            class="inline-flex items-center gap-x-1 rounded-10 dark:bg-gray-700 bg-gray-100 py-2 px-4 text-sm text-gray-400 hover:text-gray-500 dark:hover:text-white"
           >
             <span>Jan - Aug</span>
             <ChevronDownIcon class="h-6 w-6 stroke-current" />
@@ -127,13 +129,15 @@ const invoices = [
           </div>
         </div>
       </div>
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">
+          <h2 class="text-[20px] font-medium text-gray-700 dark:text-white">
             Recent transactions
           </h2>
           <button
-            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-700 py-2 px-4 text-sm text-gray-400 hover:text-white"
+            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-100 dark:bg-gray-700 py-2 px-4 text-sm text-gray-600 dark:text-gray-400 dark:hover:text-white hover:text-gray-500"
           >
             View All
           </button>
@@ -142,7 +146,7 @@ const invoices = [
           <tbody>
             <tr
               v-for="transaction in recentTransactions"
-              class="border-b border-gray-700 last:border-none"
+              class="border-b dark:border-gray-700 border-gray-100 last:border-none"
               :key="transaction"
             >
               <td class="py-4">
@@ -157,10 +161,10 @@ const invoices = [
                   >
                     <Component
                       :is="transaction.icon"
-                      class="h-5 w-5 fill-current text-gray-900"
+                      class="h-5 w-5 fill-current dark:text-gray-900 text-white"
                     />
                   </div>
-                  <span class="text-sm text-white">
+                  <span class="text-sm dark:text-white text-gray-700">
                     {{ transaction.type }}
                   </span>
                 </div>
@@ -168,7 +172,7 @@ const invoices = [
               <td class="py-4">
                 <div class="flex items-center gap-x-2">
                   <div
-                    class="flex items-center justify-center rounded-full bg-gray-700 p-2"
+                    class="flex items-center justify-center rounded-full dark:bg-gray-700 bg-gray-100 p-2"
                   >
                     <CalendarIcon
                       class="h-6 w-6 stroke-current text-gray-400"
@@ -180,12 +184,12 @@ const invoices = [
                 </div>
               </td>
               <td class="p-4">
-                <span class="text-sm text-white">
+                <span class="text-sm dark:text-white text-gray-700">
                   {{ transaction.amount }}
                 </span>
               </td>
               <td class="p-4">
-                <span class="text-sm text-white">
+                <span class="text-sm dark:text-white text-gray-700">
                   {{ transaction.balance }}
                 </span>
               </td>
@@ -274,32 +278,42 @@ const invoices = [
       </div>
     </div>
     <div class="flex w-2/5 flex-col gap-y-8">
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">Scheduled transfer</h2>
+          <h2 class="text-[20px] font-medium text-gray-700 dark:text-white">
+            Scheduled transfer
+          </h2>
           <button
-            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-700 py-2 px-4 text-sm text-gray-400 hover:text-white"
+            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-100 dark:bg-gray-700 py-2 px-4 text-sm text-gray-400 dark:hover:text-white hover:text-gray-500"
           >
             <PlusIcon class="h-6 w-6 stroke-current" />
             <span>Add new</span>
           </button>
         </div>
         <div class="grid grid-cols-3 gap-x-4 pt-4">
-          <div class="rounded-10 bg-gray-700 p-3">
+          <div class="rounded-10 bg-gray-100 dark:bg-gray-700 p-3">
             <img src="~/assets/img/youtube.png" alt="youtube" class="w-16" />
-            <div class="pt-6 text-sm text-white">$39.9/m</div>
+            <div class="pt-6 text-sm dark:text-white text-gray-700">
+              $39.9/m
+            </div>
           </div>
-          <div class="rounded-10 bg-gray-700 p-3">
+          <div class="rounded-10 dark:bg-gray-700 bg-gray-100 p-3">
             <img src="~/assets/img/netflix.png" alt="netflix" class="w-16" />
-            <div class="pt-6 text-sm text-white">$45.2/m</div>
+            <div class="pt-6 text-sm dark:text-white text-gray-700">
+              $45.2/m
+            </div>
           </div>
-          <div class="rounded-10 bg-gray-700 p-3">
+          <div class="rounded-10 bg-gray-100 dark:bg-gray-700 p-3">
             <img src="~/assets/img/spotify.png" alt="spotify" class="w-16" />
-            <div class="pt-6 text-sm text-white">$59.5/m</div>
+            <div class="pt-6 text-sm text-gray-700 dark:text-white">
+              $59.5/m
+            </div>
           </div>
         </div>
         <button
-          class="mt-4 w-full rounded-10 bg-gray-700 py-3 text-gray-400 hover:text-white"
+          class="mt-4 w-full rounded-10 dark:bg-gray-700 bg-gray-100 py-3 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
         >
           Get Started
         </button>
