@@ -57,7 +57,7 @@
         </button>
       </div>
       <button
-        class="flex h-11 items-center justify-center rounded-full bg-gray-900 px-2 text-gray-400 hover:text-white"
+        class="flex h-11 items-center justify-center rounded-full bg-gray-50 dark:bg-gray-900 px-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white drop-shadow-[0px_1px_10px_#cbd5e1] dark:drop-shadow-none"
       >
         <img
           src="~/assets/img/avatar-1.jpeg"
