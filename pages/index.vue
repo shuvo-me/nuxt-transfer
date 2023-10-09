@@ -197,11 +197,15 @@ const invoices = [
           </tbody>
         </table>
       </div>
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">Invoices</h2>
+          <h2 class="text-[20px] font-medium text-gray-700 dark:text-white">
+            Invoices
+          </h2>
           <button
-            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-700 py-2 px-4 text-sm text-gray-400 hover:text-white"
+            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-100 dark:bg-gray-700 py-2 px-4 text-sm text-gray-400 dark:hover:text-white hover:text-gray-600"
           >
             <PlusIcon class="h-6 w-6 stroke-current" />
             <span>New Invoices</span>
@@ -220,16 +224,16 @@ const invoices = [
           <tbody>
             <tr
               v-for="invoice in invoices"
-              class="border-b border-gray-700 last:border-none"
+              class="border-b border-gray-100 dark:border-gray-700 last:border-none"
               :key="invoice"
             >
               <td class="py-4">
-                <span class="text-sm font-medium text-white">
+                <span class="text-sm font-medium text-gray-700 dark:text-white">
                   {{ invoice.no }}
                 </span>
               </td>
               <td class="py-4">
-                <span class="text-sm text-gray-400">
+                <span class="text-sm text-gray-700 dark:text-white">
                   {{ invoice.date }}
                 </span>
               </td>
@@ -240,13 +244,13 @@ const invoices = [
                     alt=""
                     class="h-7 w-7 rounded-full object-cover"
                   />
-                  <span class="text-sm text-white">
+                  <span class="text-sm text-gray-700 dark:text-white">
                     {{ invoice.name }}
                   </span>
                 </div>
               </td>
               <td class="py-4">
-                <span class="text-sm text-white">
+                <span class="text-sm text-gray-700 dark:text-white">
                   {{ invoice.amount }}
                 </span>
               </td>
@@ -318,11 +322,15 @@ const invoices = [
           Get Started
         </button>
       </div>
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">My savings</h2>
+          <h2 class="text-[20px] font-medium dark:text-white text-gray-700">
+            My savings
+          </h2>
           <button
-            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-700 py-2 px-4 text-sm text-gray-400 hover:text-white"
+            class="inline-flex items-center gap-x-1 rounded-10 bg-gray-100 dark:bg-gray-700 py-2 px-4 text-sm text-gray-700 dark:text-gray-400 dark:hover:text-white hover:text-gray-500"
           >
             <span>Weekly</span>
             <ChevronDownIcon class="h-6 w-6 stroke-current" />
@@ -330,22 +338,28 @@ const invoices = [
         </div>
         <div class="flex flex-col gap-y-4 pt-4">
           <div
-            class="flex w-full items-start gap-x-4 rounded-10 bg-gray-700 p-4"
+            class="flex w-full items-start gap-x-4 rounded-10 bg-gray-100 dark:bg-gray-700 p-4"
           >
             <div
               class="flex items-center justify-center rounded-full bg-indigo-800 p-2"
             >
-              <InvestmentIcon class="h-5 w-5 fill-current text-gray-900" />
+              <InvestmentIcon
+                class="h-5 w-5 fill-current dark:text-gray-900 text-white"
+              />
             </div>
             <div class="flex-1">
               <div class="flex items-center justify-between leading-none">
-                <span class="text-white">Investment</span>
-                <span class="font-medium text-white">$2.350.02</span>
+                <span class="dark:text-white text-gray-700">Investment</span>
+                <span class="font-medium dark:text-white text-gray-700"
+                  >$2.350.02</span
+                >
               </div>
               <span class="text-sm leading-3 text-gray-400">
                 2 months income 80%
               </span>
-              <div class="mt-3 h-2 w-full rounded-full bg-gray-900">
+              <div
+                class="mt-3 h-2 w-full rounded-full dark:bg-gray-900 bg-gray-50"
+              >
                 <div
                   class="h-2 rounded-full bg-indigo-400"
                   style="width: 80%"
@@ -354,37 +368,49 @@ const invoices = [
             </div>
           </div>
           <div
-            class="flex w-full items-start gap-x-4 rounded-10 bg-gray-700 p-4"
+            class="flex w-full items-start gap-x-4 rounded-10 bg-gray-100 dark:bg-gray-700 p-4"
           >
             <div
               class="flex items-center justify-center rounded-full bg-green-400 p-2"
             >
-              <FundIcon class="h-5 w-5 fill-current text-gray-900" />
+              <FundIcon
+                class="h-5 w-5 fill-current text-white dark:text-gray-900"
+              />
             </div>
             <div class="flex-1">
               <div class="flex items-center justify-between leading-none">
-                <span class="text-white">Mutual fund</span>
-                <span class="font-medium text-white">$1,450.02</span>
+                <span class="text-gray-700 dark:text-white">Mutual fund</span>
+                <span class="font-medium text-gray-700 dark:text-white"
+                  >$1,450.02</span
+                >
               </div>
               <span class="text-sm leading-3 text-gray-400">
                 3 months income 50%
               </span>
-              <div class="mt-3 h-2 w-full rounded-full bg-gray-900">
+              <div
+                class="mt-3 h-2 w-full rounded-full bg-gray-50 dark:bg-gray-900"
+              >
                 <div class="h-2 rounded-full bg-green-400" style="width: 50%" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-col justify-between rounded-10 bg-gray-900 p-7">
+      <div
+        class="flex flex-col justify-between rounded-10 bg-gray-50 dark:bg-gray-900 p-7"
+      >
         <div class="flex items-center justify-between">
-          <h2 class="text-[20px] font-medium text-white">Revenue statistic</h2>
-          <button class="p-2 text-gray-400 hover:text-white">
+          <h2 class="text-[20px] font-medium text-gray-700 dark:text-white">
+            Revenue statistic
+          </h2>
+          <button
+            class="p-2 text-gray-400 dark:hover:text-white hover:text-gray-700"
+          >
             <DotsCircleIcon class="h-6 w-6 fill-current" />
           </button>
         </div>
         <div class="flex items-center gap-x-4 pt-4">
-          <div class="rounded-10 bg-gray-700 p-4">
+          <div class="rounded-10 bg-gray-100 dark:bg-gray-700 p-4">
             <DoughnutChart />
           </div>
           <div class="flex flex-1 flex-col gap-4">
